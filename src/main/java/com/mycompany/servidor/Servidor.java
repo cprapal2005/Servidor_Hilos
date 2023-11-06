@@ -4,14 +4,12 @@
 
 package com.mycompany.servidor;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import javax.swing.JFrame;
 
 /**
  *
@@ -63,7 +61,7 @@ public class Servidor {
                     if(clientes[i]==null) {
                         clientes[i] = server.accept();    
                         System.out.println("Cliente conectado");
-                        coordenadasPuntos[i] = MITAD_PANTALLA ;//Mitad pantalla.
+                        coordenadasPuntos[i] = MITAD_PANTALLA ;
                         HiloServidor hs = new HiloServidor(clientes[i],clientes,coordenadasPuntos);
                         hs.start();
                     }

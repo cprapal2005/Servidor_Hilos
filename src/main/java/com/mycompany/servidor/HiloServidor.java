@@ -96,7 +96,6 @@ public class HiloServidor extends Thread{
 
         String coordenadasStr = coordenadasStrBuilder.toString();
 
-        // Elimina la coma final si es necesario
         if (coordenadasStr.endsWith(",")) {
             coordenadasStr = coordenadasStr.substring(0, coordenadasStr.length() - 1);
         }
